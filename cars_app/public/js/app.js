@@ -63,54 +63,70 @@ class App extends React.Component {
 	render = () => {
 		return (
 			<div>
-				<h2>Garage</h2>
-				<form onSubmit={this.handleSubmit}>
-					<label className='create' htmlFor='name'>
-						Make
-					</label>
-					<input
-						className='create'
-						type='text'
-						id='make'
-						onChange={this.handleChange}
-						value={this.state.name}
-					/>
+				<div className='card mt-3 col-6 offset-3'>
+					<h2 className='card-title my-3'>Garage</h2>
+					<div className='card-body'>
+						<form onSubmit={this.handleSubmit}>
+							<div className='card-text my-3'>
+								<label className='mx-1' htmlFor='make'>
+									Make
+								</label>
+								<input
+									className='mx-1'
+									type='text'
+									id='make'
+									onChange={this.handleChange}
+									value={this.state.make}
+								/>
+							</div>
 
-					<label className='create' htmlFor='species'>
-						Model
-					</label>
-					<input
-						className='create'
-						type='text'
-						id='model'
-						onChange={this.handleChange}
-						value={this.state.species}
-					/>
+							<div className='card-text my-3'>
+								<label className='mx-1' htmlFor='model'>
+									Model
+								</label>
+								<input
+									className='mx-1'
+									type='text'
+									id='model'
+									onChange={this.handleChange}
+									value={this.state.model}
+								/>
+							</div>
 
-					<label className='create' htmlFor='year'>
-						Year
-					</label>
-					<input
-						className='create'
-						type='text'
-						id='model'
-						onChange={this.handleChange}
-						value={this.state.species}
-					/>
+							<div className='card-text my-3'>
+								<label className='mx-1' htmlFor='year'>
+									Year
+								</label>
+								<input
+									className='mx-1'
+									type='text'
+									id='year'
+									onChange={this.handleChange}
+									value={this.state.year}
+								/>
+							</div>
 
-					<label className='create' htmlFor='image'>
-						Image
-					</label>
-					<input
-						className='create'
-						type='text'
-						id='image'
-						onChange={this.handleChange}
-						value={this.state.image}
-					/>
+							<div className='card-text my-3'>
+								<label className='mx-1' htmlFor='image'>
+									Image
+								</label>
+								<input
+									className='mx-1'
+									type='text'
+									id='image'
+									onChange={this.handleChange}
+									value={this.state.image}
+								/>
+							</div>
 
-					<input className='create submit' type='submit' value='Add a Car' />
-				</form>
+							<input
+								className='btn btn-primary my-3'
+								type='submit'
+								value='Add a Car'
+							/>
+						</form>
+					</div>
+				</div>
 				<div className='carContainer'>
 					{this.state.cars.map(car => {
 						return (
